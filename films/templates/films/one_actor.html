@@ -1,0 +1,17 @@
+{% extends 'films/base.html' %}
+
+{% block title %} Information about the actor {{ actor }} {% endblock %}
+
+{% block content %}
+    <h2> Actor </h2>
+    <h3> Name - {{ actor.first_name }} </h3>
+    <h3> Surname - {{ actor.last_name }} </h3>
+    <h3> Gender - {{ actor.gender }} </h3>
+    <hr>
+    <h3> Film list: </h3>
+    <ul>
+        {% for film in actor.movies.all %}
+            <li> {{ film }} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

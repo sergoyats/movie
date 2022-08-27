@@ -1,0 +1,6 @@
+env\
+.idea
+db.sqlite3
+*.pyc
+__pycache__
+*.log
